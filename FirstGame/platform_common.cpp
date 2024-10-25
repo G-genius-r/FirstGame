@@ -11,6 +11,8 @@ enum {
 	BUTTON_LEFT,
 	BUTTON_RIGHT,
 	BUTTON_ENTER,
+	BUTTON_A,
+	BUTTON_D,
 
 	BUTTON_COUNT, // should be the last itom
 };

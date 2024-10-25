@@ -122,10 +122,9 @@ simulate_game(Input* input, float dt) {
 
 	} else {
 
-		if (pressed(BUTTON_LEFT) || pressed(BUTTON_RIGHT)) {
-			hot_button = !hot_button;
+		if (pressed(BUTTON_LEFT) || pressed(BUTTON_RIGHT) || pressed(BUTTON_A) || pressed(BUTTON_D)) {
+			hot_button = ~hot_button;
 		}
-
 
 
 		if (pressed(BUTTON_ENTER)) {
@@ -134,14 +133,15 @@ simulate_game(Input* input, float dt) {
 		}
 
 		if (hot_button == 0) {
-			draw_text("SINGLE_PLAYER", -80, -10, 1, 0x9E1818);
-			draw_text("MULTIPLAYER", 20, -10, 1, 0xb0998f);  			                                                
+			draw_text("SINGLE_PLAYER", -80, 0, 1, 0x9E1818);
+			draw_text("MULTIPLAYER", 20, 0, 1, 0xb0998f);  			                                                
 		}                                                     
 		else {									             
-			draw_text("SINGLE_PLAYER", -80, -10, 1, 0xb0998f);
-			draw_text("MULTIPLAYER", 20, -10, 1, 0x9E1818);
+			draw_text("SINGLE_PLAYER", -80, 0, 1, 0xb0998f);
+			draw_text("MULTIPLAYER", 20, 0, 1, 0x9E1818);
 		}
 
+		draw_text("PRESS_ENTER_TO_CONTINUE", -80, -40, 0.5, 0x9E1818);
 	}
 }
 
